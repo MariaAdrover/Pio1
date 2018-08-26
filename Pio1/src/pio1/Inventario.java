@@ -71,7 +71,7 @@ public class Inventario extends JFrame {
         this.textoAxe = new JLabel();
         this.setTengoAxe(false);
         this.textoAxe.enableInputMethods(false);
-        this.textoAxe.setFont(new Font("Courier New", Font.BOLD, 32));
+        this.textoAxe.setFont(new Font("Courier New", Font.BOLD, 25));
         
         this.tengoAxe = false;
         
@@ -129,10 +129,10 @@ public class Inventario extends JFrame {
     public void setTengoAxe(boolean estadoAxe) {
         this.tengoAxe = estadoAxe;
         if (this.tengoAxe) {
-        this.textoAxe.setText("Tienes un hacha. Puedes cortar árboles para construir tu casa");
+        this.textoAxe.setText("Tienes un hacha. Ya puedes conseguir madera para construir tu casa");
             
         } else {
-        this.textoAxe.setText("Busca un hacha                        ");
+        this.textoAxe.setText("No puedes cortar árboles. Busca un hacha                   ");
             
         }
     }
