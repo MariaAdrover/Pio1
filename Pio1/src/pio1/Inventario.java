@@ -103,7 +103,8 @@ public class Inventario extends JFrame {
         panel.add(this.numeroTroncos); 
 
         contenedor.add(panel);
-
+        
+        this.setAbierto(true);
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         this.setVisible(true);
     }
