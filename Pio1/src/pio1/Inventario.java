@@ -47,15 +47,22 @@ public class Inventario extends JFrame {
         panel.setBackground(Color.pink);
         
         // Scroll inventario
-        JScrollPane scroll = new JScrollPane();
-        scroll.setHorizontalScrollBarPolicy(HORIZONTAL_SCROLLBAR_ALWAYS);
-        scroll.setVerticalScrollBarPolicy(VERTICAL_SCROLLBAR_ALWAYS);
+        //JScrollPane scroll = new JScrollPane();
+        //scroll.setHorizontalScrollBarPolicy(HORIZONTAL_SCROLLBAR_ALWAYS);
+        //scroll.setVerticalScrollBarPolicy(VERTICAL_SCROLLBAR_ALWAYS);
         //scroll.setSize(PWIDTH, PHEIGHT);
         //scroll.setVisible(true);
         
         // Panel del scroll
-        JPanel panelScroll = new JPanel();
-                
+        //JPanel panelScroll = new JPanel();
+        
+        // Instrucciones
+        JLabel instrucciones = new JLabel("--> Mover Pio: A,D,W,S  o  flechas       ");
+        JLabel instrucciones2 = new JLabel("--> Acción: E                           ");
+        JLabel instrucciones3 = new JLabel("--> Abrir/Cerrar inventario: I                ");
+        instrucciones.setFont(new Font("Courier New", Font.BOLD, 40));
+        instrucciones2.setFont(new Font("Courier New", Font.BOLD, 40));
+        instrucciones3.setFont(new Font("Courier New", Font.BOLD, 40));
         // Axe
         JLabel imagenAxe = new JLabel();
         ImageIcon icono = new ImageIcon("img/axe2.png");
@@ -64,7 +71,7 @@ public class Inventario extends JFrame {
         this.textoAxe = new JLabel();
         this.setTengoAxe(false);
         this.textoAxe.enableInputMethods(false);
-        this.textoAxe.setFont(new Font("Courier New", Font.BOLD, 40));
+        this.textoAxe.setFont(new Font("Courier New", Font.BOLD, 32));
         
         this.tengoAxe = false;
         
@@ -78,14 +85,17 @@ public class Inventario extends JFrame {
         this.numeroTroncos.setFont(new Font("Courier New", Font.BOLD, 60));
         
         // Afegir contingut
-        panelScroll.add(imagenAxe);   
-        panelScroll.add(this.textoAxe);     
-        panelScroll.add(imagenTroncos);
-        panelScroll.add(this.numeroTroncos); 
+        //panelScroll.add(imagenAxe);   
+        //panelScroll.add(this.textoAxe);     
+        //panelScroll.add(imagenTroncos);
+        //panelScroll.add(this.numeroTroncos); 
         
-        scroll.add(panelScroll);
+        //scroll.add(panelScroll);
         
-        panel.add(scroll);
+        //panel.add(scroll);
+        panel.add(instrucciones); 
+        panel.add(instrucciones2); 
+        panel.add(instrucciones3); 
         
         panel.add(imagenAxe);   
         panel.add(this.textoAxe);     
@@ -118,7 +128,7 @@ public class Inventario extends JFrame {
     public void setTengoAxe(boolean estadoAxe) {
         this.tengoAxe = estadoAxe;
         if (this.tengoAxe) {
-        this.textoAxe.setText("Tienes un hacha. Puedes cortar árboles");
+        this.textoAxe.setText("Tienes un hacha. Puedes cortar árboles para construir tu casa");
             
         } else {
         this.textoAxe.setText("Busca un hacha                        ");
